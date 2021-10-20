@@ -13,6 +13,18 @@ const ACCESSORY_PRICE = 9.99;
 
 var bank_balance = 303.91;
 var amount = 0;
+
 // your code goes here
+
+while (amount < bank_balance) {
+  amount += PHONE_PRICE;
+  if (amount < SPENDING_THRESHOLD) {
+    amount += ACCESSORY_PRICE;
+  }
+}
+
+const amountAfterTax = (amount + amount * TAX_RATE).toFixed(2);
+
+console.log(amountAfterTax);
 
 // ⛑ Answer of the above will `$334.76`.
